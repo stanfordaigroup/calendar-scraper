@@ -8,8 +8,8 @@ This script automatically updates the [SAIG calendar](http://www.stanfordai.grou
 
 ## What this does:
 
-1. Setups up GitHub API authentication and fetches the latest calendar.json file from the [SAIG website repo](https://github.com/stanfordaigroup/stanfordai.group).
-2. Setups up Google Calendar API auth and fetches the latest calendar data.
+1. Sets up GitHub API authentication and fetches the latest calendar.json file from the [SAIG website repo](https://github.com/stanfordaigroup/stanfordai.group).
+2. Sets up Google Calendar API auth and fetches the latest calendar data.
 3. Formats latest calendar data to only what we need.
 4. Compare old and new data to see if changes exist.
 5. Use the GitHub API to update (push a commit) the calendar.json file if we find changes.
