@@ -7,6 +7,8 @@ const cal = new CalendarAPI(CONFIG.googleCalendar);
 
 const github = new GitHubApi({});
 
+console.log('Config data:', CONFIG);
+
 async function init() {
   let hasChanged = false;
   let newCalendarData = null;
