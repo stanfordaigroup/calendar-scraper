@@ -4,7 +4,7 @@
 
 > _**NOTE**: Not meant for external use, but still open-source for those interested._
 
-This script automatically update the [SAIG calendar](http://www.stanfordai.group/) based on our shared google calendar.
+This script automatically updates the [SAIG calendar](http://www.stanfordai.group/) based on our shared google calendar.
 
 ## What this does:
 
@@ -14,6 +14,8 @@ This script automatically update the [SAIG calendar](http://www.stanfordai.group
 4. Compare old and new data to see if changes exist.
 5. Use the GitHub API to update (push a commit) the calendar.json file if we find changes.
 6. Our netlify app hosting the website notices the new commit and automatically rebuilds the website with the new data.
+
+The app is hosted on heroku, where we do a check every 10 min for changes to the calendar.
 
 ---
 
