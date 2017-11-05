@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const CONFIG = require("./config");
 const GitHubApi = require('github');
 const base64 = require('js-base64').Base64;
@@ -6,8 +8,6 @@ const CalendarAPI = require('node-google-calendar');
 const cal = new CalendarAPI(CONFIG.googleCalendar);
 
 const github = new GitHubApi({});
-
-console.log('Config data:', CONFIG);
 
 async function init() {
   let hasChanged = false;
