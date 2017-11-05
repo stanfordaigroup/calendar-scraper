@@ -16,5 +16,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/main.js"
+  },
+  "engines": {
+    "node": ">= 7.6.0"
   }
 }
