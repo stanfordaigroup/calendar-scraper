@@ -20,7 +20,7 @@ async function init() {
 
   // Fetch the current JSON file in repo
   const curGitHubData = await fetchGitHubFile();
-  const curJSONContent = JSON.stringify(base64.decode(curGitHubData.content));
+  const curJSONContent = base64.decode(curGitHubData.content);
 
   // Fetch upcoming events from GCal and generate a JSON file
   const curCalData = await fetchCalendarData();
@@ -44,7 +44,6 @@ async function init() {
   if (curJSONContent !== newCalendarData) {
     hasChanged = true;
   }
-  
 
   // Update file (commit to repo) if there has been changes
   if (hasChanged && newCalendarData) {
@@ -54,11 +53,6 @@ async function init() {
   }
 }
 
-/**
- * 
- * 
- * @param {any} data — JSON data to replace contents of calendar file
- */
 function updateCalendarFile(curGitHubData, newCalendarData) {
   github.repos.getContent({
     ...CONFIG.repoOptions,
@@ -84,11 +78,6 @@ function updateCalendarFile(curGitHubData, newCalendarData) {
   }); 
 }
 
-/**
- * Fetches the latest commit info for the given repo.
- * 
- * @returns Object of repo info.
- */
 async function fetchGitHubFile() {
   let response;
 
